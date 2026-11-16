@@ -7,7 +7,7 @@
 
   /* ===== Site config — edit these ===== */
   const CONFIG = {
-    CONTACT_EMAIL: 'hello@pizzatechnologies.com', // where order tickets & enquiries go
+    CONTACT_EMAIL: 'info@pizzatechnologies.co.ke', // where order tickets & enquiries go
     BOOK_URL: '', // store link for "The Silicon Savannah Fortress" (falls back to an email request)
     GAME_LINKS: { // store / play links — a "Play now" button appears on each game card once its link is set
       pizzaStack: '',

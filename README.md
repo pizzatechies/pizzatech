@@ -38,13 +38,13 @@ Edit the values at the top of `assets/js/core.js`:
 
 ```js
 const CONFIG = {
-  CONTACT_EMAIL: 'hello@pizzatechnologies.com', // where order tickets & enquiries go
+  CONTACT_EMAIL: 'info@pizzatechnologies.co.ke', // where order tickets & enquiries go
   BOOK_URL: '',                                 // store link for "The Silicon Savannah Fortress"
   GAME_LINKS: { pizzaStack: '', tennisMayhem: '', cloudyPark: '' }, // store / play links
 };
 ```
 
-- `CONTACT_EMAIL` is a placeholder, so set your real inbox.
+- `CONTACT_EMAIL` receives order tickets. The WhatsApp number lives in the `wa.me` links in `index.html`.
 - While `BOOK_URL` is empty, "Get your copy" opens an email request instead of a store link.
 - A **Play now** button appears on each game card once its link is set.
 

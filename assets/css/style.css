@@ -990,6 +990,53 @@ section { position: relative; padding: clamp(80px, 10vw, 140px) 0; }
 .pv-lock { position: absolute; left: 50%; top: 52px; width: 26px; height: 22px; transform: translateX(-50%); border-radius: 4px; background: var(--accent); box-shadow: 0 0 20px var(--accent); }
 .pv-lock::before { content: ""; position: absolute; left: 5px; right: 5px; top: -12px; height: 14px; border: 3px solid var(--accent); border-bottom: 0; border-radius: 10px 10px 0 0; }
 
+/* ----- project with a live preview (Amber) ----- */
+.pv-amberlive { display: block; background: radial-gradient(ellipse at 50% 120%, rgba(240, 162, 28, .35), transparent 70%), #f4efe6; }
+.am-ui { position: absolute; inset: 14px 14px 0; border-radius: 10px 10px 0 0; background: #fffdf9; box-shadow: 0 12px 30px -10px rgba(0, 0, 0, .55); overflow: hidden; transform: translateY(8px); transition: transform .6s var(--ease); }
+.project:hover .am-ui { transform: translateY(0); }
+.am-bar { display: flex; align-items: center; gap: 6px; height: 22px; padding: 0 8px; border-bottom: 1px solid #eee5d6; }
+.am-logo { width: 10px; height: 10px; border-radius: 3px; background: #f0a21c; }
+.am-bar b { font-family: Georgia, 'Times New Roman', serif; font-size: 9px; color: #1d1a16; }
+.am-search { flex: 1; height: 9px; border-radius: 9px; border: 1px solid #e3d9c8; }
+.am-btn { width: 30px; height: 11px; border-radius: 3px; background: #f0a21c; }
+.am-hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 8px; padding: 12px 10px; }
+.am-copy small { display: block; font-size: 6px; letter-spacing: .08em; color: #b26a00; font-weight: 700; }
+.am-copy b { display: block; font-family: Georgia, 'Times New Roman', serif; font-size: 13px; line-height: 1.05; color: #1d1a16; margin: 3px 0 7px; }
+.am-s { display: block; position: relative; height: 11px; border-radius: 10px; background: #f3eee5; border: 1px solid #e3d9c8; }
+.am-s::after { content: ""; position: absolute; right: -1px; top: -1px; bottom: -1px; width: 24px; border-radius: 4px; background: #f0a21c; }
+.am-cards { position: relative; min-height: 80px; }
+.am-cards i { position: absolute; width: 62%; height: 40px; border-radius: 5px; font-style: normal; font-family: Georgia, serif; font-size: 16px; line-height: 1; color: #fff; padding: 6px 7px; box-shadow: 0 6px 12px -4px rgba(0, 0, 0, .45); overflow: hidden; }
+.am-cards i::after { content: ""; position: absolute; right: -12px; bottom: -16px; width: 40px; height: 40px; background: #f0a21c; transform: rotate(45deg); }
+.am-cards .c1 { left: 0; top: 0; background: #23507f; transform: rotate(-4deg); animation: amFloat 5s ease-in-out infinite; }
+.am-cards .c2 { right: 0; top: 14px; background: #ece6dc; color: #1d1a16; transform: rotate(3deg); animation: amFloat 5s ease-in-out -1.6s infinite; }
+.am-cards .c3 { left: 14%; top: 36px; background: #1d1a16; transform: rotate(-1deg); animation: amFloat 5s ease-in-out -3.2s infinite; }
+@keyframes amFloat { 50% { translate: 0 -4px; } }
+.pj-stamp.live { top: auto; left: auto; right: 10px; bottom: 10px; transform: none; display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; letter-spacing: .06em; padding: 5px 10px; border-width: 1.5px; animation: none; color: #f8e3a3; background: rgba(10, 8, 6, .82); }
+.pj-stamp.live i { width: 7px; height: 7px; border-radius: 50%; background: #f3d07e; box-shadow: 0 0 8px #f3d07e; animation: led 1.2s infinite; }
+.bake.live .bake-bar i { width: 100%; animation: none; }
+.bake.live .bake-top span:first-child { color: var(--accent); }
+.pj-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.pj-actions .pj-notify { margin-top: 0; }
+
+.has-demo .pv-ui { filter: none; transform: none; }
+.ax-row { display: flex; gap: 8px; align-items: center; } .ax-row .pv-card { flex: 1; height: 30px; }
+.ax-ai { font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; padding: 5px 8px; border-radius: 6px; color: #1b0b03; background: var(--accent); box-shadow: 0 0 14px var(--accent); white-space: nowrap; }
+.pv-tenantlive { display: block; background: radial-gradient(ellipse at 70% 120%, rgba(224, 178, 90, .3), transparent 70%), #0b0906; }
+.tf-ui { position: absolute; inset: 14px 14px 0; }
+.tf-dash { position: absolute; left: 0; top: 0; width: 62%; height: 100%; border-radius: 10px 10px 0 0; padding: 10px; background: #14110b; border: 1px solid rgba(224, 178, 90, .25); border-bottom: 0; }
+.tf-dash small, .tf-phone small { display: block; font-size: 7px; letter-spacing: .08em; text-transform: uppercase; color: #9a8c70; }
+.tf-dash b { display: block; font-size: 13px; color: #f3d07e; margin: 2px 0 8px; }
+.tf-bars { display: flex; align-items: flex-end; gap: 6px; height: 64px; }
+.tf-bars i { flex: 1; height: var(--h); border-radius: 3px 3px 0 0; background: linear-gradient(180deg, #f3d07e, #b58232); animation: bars 3.2s ease-in-out infinite; transform-origin: bottom; }
+.tf-bars i:nth-child(2) { animation-delay: -.8s; } .tf-bars i:nth-child(3) { animation-delay: -1.6s; } .tf-bars i:nth-child(4) { animation-delay: -2.4s; }
+.tf-phone { position: absolute; right: 0; top: 10px; width: 44%; bottom: -10px; border-radius: 14px 14px 0 0; padding: 12px 9px; background: #0d0b07; border: 2px solid #2c2618; border-bottom: 0; box-shadow: -10px 10px 30px -10px rgba(0, 0, 0, .8); display: flex; flex-direction: column; gap: 6px; animation: amFloat 5s ease-in-out infinite; }
+.tf-phone b { font-size: 12px; color: #f8e3a3; }
+.tf-pay { align-self: flex-start; font-size: 8px; font-weight: 700; padding: 4px 8px; border-radius: 5px; color: #1b0b03; background: linear-gradient(120deg, #e0b25a, #f8e3a3); }
+.tf-phone i { height: 16px; border-radius: 5px; background: #1a160e; border: 1px solid rgba(224, 178, 90, .18); }
+.order-alt { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 26px; }
+.order-alt .wa { fill: none; stroke: currentColor; stroke-width: 1.8; }
+.order-mail { font-family: var(--font-mono); font-size: 13px; color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+
 /* ----- published games ----- */
 .games { display: grid; gap: 22px; margin-bottom: 76px; }
 @media (min-width: 900px) { .games { grid-template-columns: repeat(3, 1fr); } }

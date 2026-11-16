@@ -9,6 +9,7 @@
 
   /* ---------- emails ---------- */
   $$('.js-email').forEach((a) => { a.href = 'mailto:' + CONTACT_EMAIL; });
+  $$('.js-email-text').forEach((a) => { a.textContent = CONTACT_EMAIL; });
   const yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -205,6 +206,7 @@
   /* ---------- projects: notify me ---------- */
   $$('.project').forEach((p) => {
     const btn = $('.pj-notify', p);
+    if (!btn) return;
     btn.addEventListener('click', () => {
       const name = $('h3', p).textContent;
       const on = btn.classList.toggle('on');
